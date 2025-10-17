@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Report Analysis{% endblock %}
+{% block content %}
+<h1>Medical Report Analysis</h1>
+<div class="upload-area">
+    <input type="file" id="pdf-upload" accept=".pdf">
+    <button id="analyze-btn">Analyze</button>
+</div>
+<div id="analysis-results" class="results-area">
+    <!-- Analysis will be displayed here -->
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='report.js') }}"></script>
+{% endblock %}

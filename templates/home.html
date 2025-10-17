@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="home-content">
+    <h1>Welcome to Health Advisor</h1>
+    <p>Your intelligent health assistant for disease prediction and medical report analysis.</p>
+    
+    <div class="features">
+        <div class="feature-card">
+            <h3>Disease Prediction</h3>
+            <p>Enter your symptoms and get a list of potential diseases with confidence scores, prescriptions, and recommended doctors.</p>
+            <a href="{{ url_for('disease_prediction') }}" class="btn">Try Now</a>
+        </div>
+        <div class="feature-card">
+            <h3>Report Analysis</h3>
+            <p>Upload your medical reports in PDF format, and our AI will analyze them to provide a structured summary.</p>
+            <a href="{{ url_for('report_analysis') }}" class="btn">Analyze Report</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

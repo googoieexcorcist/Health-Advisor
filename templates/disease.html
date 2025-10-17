@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Disease Predictor{% endblock %}
+{% block content %}
+<h1>Disease Predictor</h1>
+<div class="input-area">
+    <div style="flex-grow: 1; position: relative;">
+        <input type="text" id="symptoms" placeholder="Enter symptoms (e.g., fever, cough)">
+        <div id="suggestions-container" class="suggestions-container"></div>
+    </div>
+    <div class="button-group">
+        <button id="predict-btn">Predict</button>
+        <button id="reset-btn">Reset</button>
+    </div></div>
+<div id="results" class="results-area">
+    <!-- Predictions will be displayed here -->
+</div>
+<div class="disclaimer">
+    <p>This is not a medical diagnosis. Always consult a doctor for medical advice.</p>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='disease.js') }}"></script>
+{% endblock %}

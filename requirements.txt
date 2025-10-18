@@ -1,4 +1,4 @@
+PyMuPDF
 Flask
 google-generativeai
 python-dotenv
-PyMuPDF
